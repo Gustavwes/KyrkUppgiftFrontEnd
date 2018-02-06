@@ -17,10 +17,11 @@ app.get('/Omgivning', function(req, res){
 app.get('/Historia', function(req, res){
     res.sendFile(__dirname + '/public/Historia.html');
 });
-
-
 app.get('/Hittahit', function(req, res){
     res.sendFile(__dirname + '/public/Hittahit.html');
+});
+app.get('/Omgivning', function(req, res){
+    res.sendFile(__dirname + '/public/Omgivning.html');
 });
 
 console.log("Lyssnar på port 6662");
