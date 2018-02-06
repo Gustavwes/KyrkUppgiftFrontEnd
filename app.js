@@ -24,4 +24,5 @@ app.get('/Omgivning', function(req, res){
     res.sendFile(__dirname + '/public/Omgivning.html');
 });
 
+
 console.log("Lyssnar på port 6662");
