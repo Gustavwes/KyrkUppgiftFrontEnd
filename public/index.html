@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles.css">
+ 
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 
     <title>SundreSkola</title>
@@ -26,7 +27,7 @@
             <a class="nav-link" href="#">Bokning/Priser</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Detta Ingår</a>
+              <a class="nav-link" onclick="getPage('DettaIngar')">Detta Ingår</a>
             </li>
           <li class="nav-item">
             <a class="nav-link" onclick="getPage('Omgivning')">Omgivning</a>
@@ -35,7 +36,7 @@
             <a class="nav-link " onclick="getPage('Hittahit')">Hitta Hit</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="#">Historia</a>
+              <a class="nav-link " onclick="getPage('Historia')">Historia</a>
             </li>
         </ul>
       </div>
@@ -45,7 +46,6 @@
     <div id="mainContent">
 
     </div>
-
     
     
     <!-- Optional JavaScript -->
@@ -54,5 +54,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="connection.js"></script>
+
+
+
+
 </body>
+
+
+
 </html>
