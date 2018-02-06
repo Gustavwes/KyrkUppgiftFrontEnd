@@ -12,4 +12,8 @@ app.get('/Omgivning', function(req, res){
     res.sendFile(__dirname + '/public/Omgivning.html');
 });
 
+app.get('/Hittahit', function(req, res){
+    res.sendFile(__dirname + '/public/Hittahit.html');
+});
+
 console.log("Lyssnar på port 6662");
