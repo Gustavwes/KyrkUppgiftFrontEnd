@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.listen(6662);
 
 app.get('/1', function(req, res){
-    res.sendFile(__dirname + '/public/test.html');
+    res.sendFile(__dirname + '/public/Hem.html');
 });
 app.get('/Omgivning', function(req, res){
     res.sendFile(__dirname + '/public/Omgivning.html');
