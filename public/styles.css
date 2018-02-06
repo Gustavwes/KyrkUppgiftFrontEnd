@@ -2,6 +2,7 @@
 body {
     background-color: #d6e3fc;
     font-family: 'Alegreya Sans', sans-serif;
+<<<<<<< HEAD
 }
 
 #hemMain{
@@ -21,3 +22,13 @@ body {
 .imageBorder{
     border: 1px solid black;
 }
+||||||| merged common ancestors
+}
+=======
+}
+
+.mellanBild{
+    height: 300px;
+    width: 500px;
+}
+>>>>>>> 36ab9975d8e5d788fbe1fcfd5174ac46dc55e25f
