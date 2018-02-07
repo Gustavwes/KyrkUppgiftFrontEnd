@@ -31,3 +31,9 @@ body {
 a{
     cursor: pointer;
 }
+
+#flygfoto{
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
