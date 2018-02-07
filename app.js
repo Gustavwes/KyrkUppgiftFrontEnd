@@ -35,21 +35,19 @@ app.get('/Bokning', function (req, res) {
 });
 
 app.post("/form", function(req, res){
-    console.log(req.body);
+    // console.log(req.body);
     // Initialize Firebase
-    // var config = {
-    //     apiKey: "AIzaSyCaejMkwFkMzYI0Y3Ahv3AA1sTldb7hiGA",
-    //     authDomain: "skolan-1a938.firebaseapp.com",
-    //     databaseURL: "https://skolan-1a938.firebaseio.com",
-    //     projectId: "skolan-1a938",
-    //     storageBucket: "",
-    //     messagingSenderId: "415041712935"
-    // };
-    // firebase.initializeApp(config);
-    // var v = firebase.database();
-    // v.ref('users').push(req.body);
+    var config = {
+        apiKey: "AIzaSyCaejMkwFkMzYI0Y3Ahv3AA1sTldb7hiGA",
+        authDomain: "skolan-1a938.firebaseapp.com",
+        databaseURL: "https://skolan-1a938.firebaseio.com",
+        projectId: "skolan-1a938",
+        storageBucket: "",
+        messagingSenderId: "415041712935"
+    };
+    firebase.initializeApp(config);
+    var v = firebase.database();
+    v.ref('bokningar').push(req.body);
 });
-
-
 
 console.log("Lyssnar på port 6662");
