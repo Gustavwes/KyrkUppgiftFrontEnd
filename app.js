@@ -48,6 +48,8 @@ app.post("/form", function(req, res){
     firebase.initializeApp(config);
     var v = firebase.database();
     v.ref('bokningar').push(req.body);
+
+    res.redirect('/');
 });
 
 console.log("Lyssnar på port 6662");

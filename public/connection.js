@@ -19,7 +19,7 @@ function getForm() {
     var month = date.getMonth()+1;
     var date = date.getDate();
     frm += `<label>Boknings Datum</label><input name=bokdatum value='${year}-${month}-${date}' readonly required/><br/>`;
-    frm += `<label> </label><button type="submit">Send</button>`
+    frm += `<label> </label><button type="submit" >Send</button>`
     frm += '</form>';
     document.getElementById("mainContent").innerHTML = frm;
 }
