@@ -28,6 +28,9 @@ app.get('/Hittahit', function (req, res) {
 app.get('/Omgivning', function (req, res) {
     res.sendFile(__dirname + '/public/Omgivning.html');
 });
+app.get('/Bokning', function (req, res) {
+    res.sendFile(__dirname + '/public/Bokning.html');
+});
 app.get('/Bild', function (req, res) {
     res.send();
 });
