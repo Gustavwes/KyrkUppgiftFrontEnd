@@ -16,3 +16,8 @@ function visaBild(image){
     html += "</div></div>";
     document.getElementById("mainContent").innerHTML = html;
 }
+
+
+
+
+

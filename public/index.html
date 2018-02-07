@@ -11,7 +11,7 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="modal.css">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 
   <title>SundreSkola</title>
@@ -46,11 +46,26 @@
     </div>
   </nav>
   <!-- End of navbar-->
+
+  <!-- Main content -->
   <div class="container-fluid">
     <div id="mainContent">
 
     </div>
   </div>
+  <!-- End of main content -->
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <!-- End of Modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -60,5 +75,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
       crossorigin="anonymous"></script>
     <script src="connection.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
