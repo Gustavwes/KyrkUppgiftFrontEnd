@@ -9,8 +9,11 @@ function getPage(page) {
 }
 
 function getForm() {
-    var array = ["Veckor", "Betala","Förnamn", "Efternamn", "Personnr", "Adress", "Postnr", "Ort", "Telefon", "Mail"];
-    var frm = "<form action=/form method=post>";
+    
+    var array = ["Förnamn", "Efternamn", "Personnr", "Adress", "Postnr", "Ort", "Telefon", "Mail"];
+    var frm = "<div class='form-inline'><form action=/form method=post>";
+    frm += `<label>Veckor</label><input name=veckor placeholder='Exempel: 29,30' required/><br/>`;
+    frm += `<label>Att Betala</label><input name=betalning placeholder='Exempel: 9000:-'  required/><br/>`;
     array.forEach(x => {
         frm += `<label>${x}</label><input name=${x.toLowerCase()} required/><br/>`;
     });
@@ -20,7 +23,7 @@ function getForm() {
     var date = date.getDate();
     frm += `<label>Boknings Datum</label><input name=bokdatum value='${year}-${month}-${date}' readonly required/><br/>`;
     frm += `<label> </label><button type="submit" >Send</button>`
-    frm += '</form>';
+    frm += '</form></div>';
     document.getElementById("mainContent").innerHTML = frm;
 }
 
