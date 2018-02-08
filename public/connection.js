@@ -8,6 +8,7 @@ function getPage(page) {
     });
 }
 
+
 function getForm() {
 
     var array = ["Förnamn", "Efternamn", "Personnr", "Adress", "Postnr", "Ort", "Telefon", "Mail"];

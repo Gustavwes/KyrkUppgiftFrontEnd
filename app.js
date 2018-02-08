@@ -37,6 +37,17 @@ app.get('/Admin', function (req, res) {
     res.sendFile(__dirname + '/public/Admin.html');
 });
 
+app.post("/login", function(req, res){
+console.log("kommer vi in här?")
+    console.log(req.body);
+    if(req.body.username == "admin" && req.body.password == "password")
+    {
+        console.log("vi är inloggade!!");
+    }
+    else{
+        res.redirect('/');
+    }
+})
 
 app.post("/form", function(req, res){
     // console.log(req.body);
