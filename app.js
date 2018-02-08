@@ -33,6 +33,10 @@ app.get('/Omgivning', function (req, res) {
 app.get('/Bokning', function (req, res) {
     res.sendFile(__dirname + '/public/Bokning.html');
 });
+app.get('/Admin', function (req, res) {
+    res.sendFile(__dirname + '/public/Admin.html');
+});
+
 
 app.post("/form", function(req, res){
     // console.log(req.body);
