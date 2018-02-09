@@ -13,14 +13,6 @@ function showPic(image, caption){
   captionText.innerHTML = caption;
 }    
 
-// Get the <span> element that closes the modal
-// var closeSpan = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// closeSpan.onclick = function() { 
-//   modal.style.display = "none";
-// }
-
 modal.onclick = function() {
   modal.style.display = "none";
 }
