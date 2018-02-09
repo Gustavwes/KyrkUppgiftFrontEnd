@@ -6,7 +6,7 @@ function getPage(page) {
     $.get('/' + page, function (response) {
         document.getElementById("mainContent").innerHTML = response;
     });
-}
+};
 
 function getForm() {
     var array = ["Förnamn", "Efternamn", "Personnr", "Adress", "Postnr", "Ort", "Telefon", "Mail"];
