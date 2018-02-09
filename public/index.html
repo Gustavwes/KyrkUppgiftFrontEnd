@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="styles.css">
- 
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="modal.css">
@@ -21,7 +23,7 @@
 
 <body>
   <!-- Start of navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <a class="navbar-brand" href='' onclick="getPage('1')">Sundre gamla skola</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -33,24 +35,23 @@
           <a class="nav-link" onclick="getPage('Bokning')">Bokning/Priser</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  onclick="getPage('DettaIngar')">Detta Ingår</a>
+          <a class="nav-link" onclick="getPage('DettaIngar')">Detta Ingår</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  onclick="getPage('Omgivning')">Omgivning</a>
+          <a class="nav-link" onclick="getPage('Omgivning')">Omgivning</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link "  onclick="getPage('Hittahit')">Hitta Hit</a>
+          <a class="nav-link " onclick="getPage('Hittahit')">Hitta Hit</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  onclick="getPage('Historia')">Historia</a>
+          <a class="nav-link" onclick="getPage('Historia')">Historia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  onclick="getPage('Admin')">Admin</a>
+          <a class="nav-link" onclick="getPage('Admin')">Admin</a>
         </li>
       </ul>
     </div>
   </nav>
-
   <!-- End of navbar-->
 
   <!-- Main content -->
@@ -63,23 +64,20 @@
 
   <!-- Modal -->
   <div id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
-    <!-- Modal Caption (Image Text) -->
+    <img class="modal-image" id="modalImage">
     <div id="caption"></div>
   </div>
-
   <!-- End of Modal -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <script src="connection.js"></script>
-    <script src="modal.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+  <script src="connection.js"></script>
+  <script src="modal.js"></script>
 </body>
 
 
