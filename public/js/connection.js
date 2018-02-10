@@ -61,5 +61,11 @@ function getForm() {
     document.getElementById("mainContent").innerHTML = html;
 }
 
-
-
+function tryLogin(form){
+    var form = document.querySelector("#loginForm");
+    $.post("/login", {username: form["username"].value, password: form["password"].value}, function(response){
+        document.getElementById("mainContent").innerHTML = response;
+    });
+    // console.log(form["username"].value + ";" +  form["password"].value);
+    return false;
+}

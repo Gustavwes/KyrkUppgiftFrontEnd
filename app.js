@@ -10,39 +10,6 @@ var firebase = require('firebase');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(6662);
-
-
-app.get('/2', function (req, res) {
-    var v = firebase.database();
-    
-    v.ref('/bokningar').once('value').then(function (snapshot) {        
-        var html = "<h1>Bokningar</h1>";
-        html += `<table>`
-        snapshot.forEach(childSnap => {
-            if (childSnap.val()) {
-                html += "<tr>";
-                html += "<td>" + childSnap.val().veckor + "</td>";
-                html += "<td>" +childSnap.val().betala + "</td>";
-                html += "<td>" + childSnap.val().förnamn + "</td>";
-                html += "<td>" + childSnap.val().efternamn + "</td>";
-                html += "<td>" + childSnap.val().personnr + "</td>";
-                html += "<td>" + childSnap.val().adress + "</td>";
-                html += "<td>" + childSnap.val().postnr + "</td>";
-                html += "<td>" + childSnap.val().ort + "</td>";
-                html += "<td>" + childSnap.val().telefon + "</td>";
-                html += "<td>" + childSnap.val().mail + "</td>";
-                html += "<td>" + childSnap.val().bokdatum + "</td>";
-                html += "</tr>";
-            }
-        });
-        html += `</table>`
-
-        //send back html when everything is done
-        res.send(html);
-    });
-});
-
 app.get('/1', function (req, res) {
     res.sendFile(__dirname + '/public/Hem.html');
 });
@@ -69,13 +36,40 @@ app.get('/Admin', function (req, res) {
 });
 
 app.post("/login", function (req, res) {
-    console.log("kommer vi in här?")
-    console.log(req.body);
     if (req.body.username == "admin" && req.body.password == "password") {
-        console.log("vi är inloggade!!");
+        var v = firebase.database();
+
+        v.ref('/bokningar').once('value').then(function (snapshot) {
+            var html = "<h1>Bokningar</h1>";
+            html += `<table>`
+            html += "<tr><th>Veckor</th><th>Att betala</th><th>Förnamn</th><th>Efternamn</th>";
+            html += "<th>Personnummer</th><th>Adress</th><th>Postnummer</th><th>Ort</th>";
+            html += "<th>Telefon</th><th>Mail</th><th>Bokningsdatum</th></tr>";
+            snapshot.forEach(childSnap => {
+                if (childSnap.val()) {
+                    html += "<tr>";
+                    html += "<td>" + childSnap.val().veckor + "</td>";
+                    html += "<td>" + childSnap.val().betala + "</td>";
+                    html += "<td>" + childSnap.val().förnamn + "</td>";
+                    html += "<td>" + childSnap.val().efternamn + "</td>";
+                    html += "<td>" + childSnap.val().personnr + "</td>";
+                    html += "<td>" + childSnap.val().adress + "</td>";
+                    html += "<td>" + childSnap.val().postnr + "</td>";
+                    html += "<td>" + childSnap.val().ort + "</td>";
+                    html += "<td>" + childSnap.val().telefon + "</td>";
+                    html += "<td>" + childSnap.val().mail + "</td>";
+                    html += "<td>" + childSnap.val().bokdatum + "</td>";
+                    html += "</tr>";
+                }
+            });
+            html += `</table>`
+
+            //send back html when everything is done
+            res.send(html);
+        });
     }
     else {
-        res.redirect('/');
+        res.sendFile(__dirname + "/public/Fail.html");
     }
 })
 
@@ -102,5 +96,7 @@ function initFirebase() {
 }
 
 initFirebase();
+
+app.listen(6662);
 
 console.log("Lyssnar på port 6662");
