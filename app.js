@@ -40,9 +40,9 @@ app.post("/login", function (req, res) {
         var v = firebase.database();
 
         v.ref('/bokningar').once('value').then(function (snapshot) {
-            var html = "<h1>Bokningar</h1>";
-            html += `<table>`
-            html += "<tr><th>Veckor</th><th>Att betala</th><th>Förnamn</th><th>Efternamn</th>";
+            var html = "<h1 class='text-center my-2'>Bokningar</h1>";
+            html += `<table class="table table-dark">`
+            html += "<tr style='color: yellow'><th>Veckor</th><th>Att betala</th><th>Förnamn</th><th>Efternamn</th>";
             html += "<th>Personnummer</th><th>Adress</th><th>Postnummer</th><th>Ort</th>";
             html += "<th>Telefon</th><th>Mail</th><th>Bokningsdatum</th></tr>";
             snapshot.forEach(childSnap => {
