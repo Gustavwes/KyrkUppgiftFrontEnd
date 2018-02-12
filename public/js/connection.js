@@ -23,7 +23,7 @@ function getForm() {
     /* Form for booking  */
     var frm = "<div class='form-inline'><form action=/form method=post>";
     frm += `<label>Veckor</label><input name=veckor placeholder='Exempel: 29,30' required/><br/>`;
-    frm += `<label>Att Betala</label><input name=betalning placeholder='Exempel: 9000:-'  required/><br/>`;
+    frm += `<label>Att Betala</label><input name=betalning placeholder='Exempel: 9000:-' required/><br/>`;
 
     array.forEach(x => {
         frm += `<label>${x}</label><input name=${x.toLowerCase()} required/><br/>`;

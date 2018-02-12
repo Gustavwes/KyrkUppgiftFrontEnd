@@ -49,7 +49,7 @@ app.post("/login", function (req, res) {
                 if (childSnap.val()) {
                     html += "<tr>";
                     html += "<td>" + childSnap.val().veckor + "</td>";
-                    html += "<td>" + childSnap.val().betala + "</td>";
+                    html += "<td>" + childSnap.val().betalning + "</td>";
                     html += "<td>" + childSnap.val().förnamn + "</td>";
                     html += "<td>" + childSnap.val().efternamn + "</td>";
                     html += "<td>" + childSnap.val().personnr + "</td>";
@@ -81,8 +81,8 @@ app.post("/form", function (req, res) {
     res.redirect('/');
 });
 
+// Initialize Firebase
 function initFirebase() {
-    // Initialize Firebase
     var config = {
         apiKey: "AIzaSyCaejMkwFkMzYI0Y3Ahv3AA1sTldb7hiGA",
         authDomain: "skolan-1a938.firebaseapp.com",
